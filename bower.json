@@ -1,0 +1,14 @@
+{
+  "name": "yatfh",
+  "version": "0.1.0",
+  "homepage": "https://github.com/inside/yatfh",
+  "authors": [
+    "Yann Thomas-Gerard <inside@gmail.com>"
+  ],
+  "description": "Yet another table fixed header",
+  "main": [
+    "yatfh.js",
+    "yatfh.css"
+  ],
+  "private": true
+}
