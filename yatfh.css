@@ -1,0 +1,83 @@
+/*Divs outside the table*/
+.yatfh,
+.yatfh-inner {
+    display: inline-block;
+    min-width: 100%;
+}
+
+.yatfh {
+    position: relative;
+    padding-top: 36px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.yatfh-inner {
+    /*
+    Edge case: When the table's width is larger than
+    the viewport, horizontal scrollbars appear.
+    We hide them, but this also hides about 15px
+    of the last td cell. Thus we add a 15 px right padding
+    to the last td cell. See td:last-child
+     */
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+    border-top: 1px solid #ddd;
+}
+
+/*Table and table elements style*/
+.yatfh table {
+    margin-bottom: 0;
+}
+
+.yatfh table th {
+    visibility: hidden;
+    padding: 0 8px;
+    border: none;
+    white-space: nowrap;
+    line-height: 0;
+}
+
+@-moz-document url-prefix() {
+    /*Aligns vertical borders*/
+    .yatfh table th {
+        padding: 0 7px;
+        // Removes the th height, line-height doesn't suffice
+        font-size: 0;
+    }
+
+    /*Removes the*/
+    .yatfh table th div {
+        // Restores the original font-size
+        font-size: 14px;
+    }
+}
+
+.yatfh table th div {
+    position: absolute;
+    top: 0;
+    visibility: visible;
+    margin-left: -8px;
+    padding: 10px 8px;
+    border-left: 1px solid #ddd;
+    color: #333;
+    line-height: normal;
+}
+
+.yatfh table th:first-child div {
+    border: none;
+}
+
+.yatfh table tr:first-child td {
+    border-top: none;
+}
+
+.yatfh table td {
+    border-right: 1px solid #ddd;
+}
+
+.yatfh table td:last-child {
+    padding-right: 15px;
+    border-right: none;
+}
