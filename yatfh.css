@@ -39,6 +39,10 @@
     line-height: 0;
 }
 
+.yatfh table th .yatfh-th-for-width-constraint {
+    height: 0;
+}
+
 @-moz-document url-prefix() {
     /*Aligns vertical borders*/
     .yatfh table th {
@@ -48,13 +52,13 @@
     }
 
     /*Removes the*/
-    .yatfh table th div {
+    .yatfh table th div.yatfh-th-displayed {
         // Restores the original font-size
         font-size: 14px;
     }
 }
 
-.yatfh table th div {
+.yatfh table th div.yatfh-th-displayed {
     position: absolute;
     top: 0;
     visibility: visible;
@@ -65,7 +69,7 @@
     line-height: normal;
 }
 
-.yatfh table th:first-child div {
+.yatfh table th:first-child div.yatfh-th-displayed {
     border: none;
 }
 
