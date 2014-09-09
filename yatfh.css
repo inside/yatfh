@@ -47,13 +47,13 @@
     /*Aligns vertical borders*/
     .yatfh table th {
         padding: 0 7px;
-        // Removes the th height, line-height doesn't suffice
+        /*Removes the th height, line-height doesn't suffice*/
         font-size: 0;
     }
 
     /*Removes the*/
     .yatfh table th div.yatfh-th-displayed {
-        // Restores the original font-size
+        /*Restores the original font-size*/
         font-size: 14px;
     }
 }
